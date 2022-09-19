@@ -1,0 +1,15 @@
+{
+    "name": "korkz/korkz-router",
+    "autoload": {
+        "psr-4": {
+            "Korkz\\KorkzRouter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hakan",
+            "email": "hakan.hizmet.54.gs@gmail.com"
+        }
+    ],
+    "require": {}
+}

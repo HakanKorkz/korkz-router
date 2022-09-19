@@ -1,0 +1,13 @@
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+php_flag log_errors on
+php_value error_log ./app/log/error.log
+</IfModule>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+#404 hata sayfası yönlendirme kodu
+#ErrorDocument 404 https://%{HTTP_HOST}%/404
+#ErrorDocument 500 https://%{HTTP_HOST}%/500
