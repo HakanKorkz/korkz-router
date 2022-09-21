@@ -1,5 +1,7 @@
 {
     "name": "korkz/korkz-router",
+    "license": "MIT",
+    "type": "libary",
     "authors": [
         {
             "name": "hakan",
@@ -11,10 +13,9 @@
             "Korkz\\KorkzRouter\\": "App/"
         }
     },
-
+    "minimum-stability": "stable",
     "require": {
         "vlucas/phpdotenv": "^5.4"
-    },
-    "license": "MIT"
+    }
 
 }
