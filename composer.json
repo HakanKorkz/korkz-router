@@ -15,7 +15,6 @@
     "require": {
         "vlucas/phpdotenv": "^5.4"
     },
-    "license": [
-        "MIT"
-    ]
+    "license": "MIT"
+
 }
