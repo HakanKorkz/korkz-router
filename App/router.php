@@ -45,14 +45,14 @@ class router
         $constantsAim = str_replace("[\"", "", $aim);
         $constantsAim = str_replace("\"]", "", $constantsAim);
         return str_replace("\"", "", $constantsAim);
+
     }
 
     public function router($requestUrl, string $control = ""): bool|array|string
     {
         $env = self::$ENV;
         $controlEnv = $env["CONSTANTS_CONTROL"];
-return        $aim=explode(",",self::aim($env["CONSTANTS_AIM"]));
-
+        $aim=self::aim($env["CONSTANTS_AIM"]);
         $urlRequest = $this->change($requestUrl);
         $url = rtrim($urlRequest, "/");
         $url = ltrim($url, "/");
@@ -72,10 +72,8 @@ return        $aim=explode(",",self::aim($env["CONSTANTS_AIM"]));
             $path = str_replace("$slash", "/", $path);
         }
         if ($control !== "$controlEnv") {
-            return $constantsAim;
-            return $constantsAim = explode(",", $constantsAim);
-            if (!str_contains($path, $constantsAim)) { // home tarafı işlemler
-                return "home";
+
+            if (!str_contains($path, "admin")) { // home tarafı işlemler
                 if (empty($path)) {
                     $path = "index";
                 }
@@ -86,7 +84,6 @@ return        $aim=explode(",",self::aim($env["CONSTANTS_AIM"]));
                 }
                 $location = "home";
             } else { // admin tarafı işlemler
-                return "admin";
                 $path = str_replace("admin", "", $path);
                 if (empty($path)) {
                     $path = "index";
